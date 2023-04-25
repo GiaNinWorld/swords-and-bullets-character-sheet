@@ -23,7 +23,7 @@ const Attributes = () => {
         </li>)
         );
   return (
-    <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 mx-2 overflow-hidden">
+    <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
         <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">{titles[1]}</h1>
         <ul>
             <li className="mx-4 text-blue-600">

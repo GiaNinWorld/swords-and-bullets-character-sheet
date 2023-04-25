@@ -18,43 +18,48 @@ const App = () => {
     <div className="App tracking-wide font-roboto min-h-screen grid dark bg-gray-900">
       <Header />
 
-      <section className='dark:bg-gray-900 lg:my-4'>
+      <section className='dark:bg-gray-900'>
 
-        <div className="flex flex-wrap w-full">
-          <div className="xl:inline-flex">
-            <div className="w-full xl:w-2/3">
-              <div className="flex">
-                <Logo />
-                <Info />
-              </div>
-              <div className="columns-2 gap-0 space-y-4 p-0 my-4">
-                <Attributes />
-                <Traits />
-                <Stats />
-                <Magic />
-              </div>
-            </div>
-            <div className="w-full xl:w-1/3">
-              <Portrait />
+        <div className="grid grid-flow-row lg:grid-col-6 lg:grid-row-3 lg:grid-flow-col gap-4 p-4 w-full">
+          <div className="col-span-6">
+            <div className="grid grid-flow-row lg:grid-flow-col gap-4">
+              <div className="col-span-1 xl:w-1/2"><Logo /></div>
+              <div className="col-span-5"><Info /></div>
             </div>
           </div>
-          <div className="xl:inline-flex w-full">
-            <div className="w-full xl:w-2/3">
-              <Skills />
-            </div>
-            <div className="w-full xl:w-1/3">
-              <div className="rounded-md bg-gray-100 dark:bg-gray-800 pt-4 m-2 overflow-hidden">
-                <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-gray-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-gray-200 rounded-md">Weapons</h1>
-              </div>
 
-              <div className="rounded-md bg-gray-100 dark:bg-gray-800 pt-4 m-2 overflow-hidden">
-                <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-gray-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-gray-200 rounded-md">Equipments</h1>
-              </div>
+          <div className="col-span-6">
+            <div className="grid grid-flow-row lg:grid-flow-col gap-4">
+              <Attributes />
+              <Stats />
             </div>
           </div>
+
+          <div className="col-span-6">
+            <div className="grid grid-flow-row lg:grid-flow-col gap-4">
+              <Traits />
+              <Magic />
+            </div>
+          </div>
+
+          <div className="grid col-span-6 row-span-1 lg:col-span-2 lg:row-span-3"><Portrait /></div>
         </div>
 
+        <div className="grid grid-flow-row lg:grid-col-6 lg:grid-flow-col gap-4 p-4 w-full">
 
+            <Skills />
+          
+          <div className="grid grid-flow-row lg:grid-col-6 gap-4 w-full">
+            <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
+              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">Weapons</h1>
+            </div>
+
+            <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
+              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">Equipments</h1>
+            </div>
+
+          </div>
+        </div>
 
       </section>
 
