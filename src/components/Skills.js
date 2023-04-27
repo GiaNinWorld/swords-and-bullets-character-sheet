@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import data from '../assets/character_sheet.json';
+import data from '../assets/mocks/character_sheet.json';
 
 function Skills() {
     const titles = Object.keys(data);

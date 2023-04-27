@@ -9,10 +9,6 @@ import Stats from './components/Stats';
 import Magic from './components/Magic';
 import Traits from './components/Traits';
 
-// const RACES = [
-//   { id: 0, name: 'Donta' }
-// ];
-
 const App = () => {
   return (
     <div className="App tracking-wide font-roboto min-h-screen grid dark bg-gray-900">
