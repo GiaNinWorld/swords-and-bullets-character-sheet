@@ -11,10 +11,10 @@ import Traits from './components/Traits';
 
 const App = () => {
   return (
-    <div className="App tracking-wide font-roboto min-h-screen grid dark bg-gray-900">
+    <div className="App tracking-wide font-roboto min-h-screen grid bg-gray-900">
       <Header />
 
-      <section className='dark:bg-gray-900'>
+      <section>
 
         <div className="grid grid-flow-row lg:grid-col-6 lg:grid-row-3 lg:grid-flow-col gap-4 p-4 w-full">
           <div className="col-span-6">
@@ -46,12 +46,12 @@ const App = () => {
             <Skills />
           
           <div className="grid grid-flow-row lg:grid-col-6 gap-4 w-full">
-            <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
-              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">Weapons</h1>
+            <div className="rounded-md bg-blue-100 py-4 overflow-hidden">
+              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md">Weapons</h1>
             </div>
 
-            <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
-              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">Equipments</h1>
+            <div className="rounded-md bg-blue-100 py-4 overflow-hidden">
+              <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800  tracking-wider bg-blue-200 rounded-md">Equipments</h1>
             </div>
 
           </div>

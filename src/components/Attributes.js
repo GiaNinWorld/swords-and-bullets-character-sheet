@@ -17,15 +17,15 @@ const Attributes = () => {
     <div className='inline-flex w-1/6'><input className='w-full m-2' /></div>
     <div className='inline-flex w-1/6'><input className='w-full m-2' /></div>
     <div className='inline-flex w-1/6 xl:w-1/12'><input className='w-full m-2' /></div>
-    <a href="#" className='px-2 py-1 text-xs font-bold text-white uppercase transition-colors duration-300 transform bg-blue-400 rounded-md dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary'>
+    <a href="#" className='px-2 py-1 text-xs font-bold text-white uppercase transition-colors duration-300 transform bg-blue-400 rounded-md'>
       Roll
     </a>
   </li>)
   );
 
   return (
-    <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
-      <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">{titles[1]}</h1>
+    <div className="rounded-md bg-blue-100 py-4 overflow-hidden">
+      <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md">{titles[1]}</h1>
       <ul>
         <li className="mx-4 text-blue-600">
           <div className='inline-flex w-3/12'>Attribute</div>

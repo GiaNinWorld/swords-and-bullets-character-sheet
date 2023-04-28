@@ -18,7 +18,7 @@ function Skills() {
             <input type='radio' name={item + 'level'} />
         </div>
         <div className='inline-flex w-1/12'>
-            <a href="#" className='mx-4 px-2 py-1 text-xs font-bold text-blue-800 uppercase transition-colors duration-300 transform bg-white rounded-md dark:bg-white hover:bg-primary dark:hover:bg-primary'>
+            <a href="#" className='mx-4 px-2 py-1 text-xs font-bold text-blue-800 uppercase transition-colors duration-300 transform bg-white rounded-md hover:bg-primary'>
                 00
             </a>
         </div>
@@ -27,8 +27,8 @@ function Skills() {
 
     const renderSkills = () => titlesSkills.map(item =>
     (<li key={item}>
-        <div className="rounded-md bg-blue-100 dark:bg-gray-800 overflow-hidden">
-            <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-400 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">{item}</h1>
+        <div className="rounded-md bg-blue-100 overflow-hidden">
+            <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-400 tracking-wider bg-blue-200 rounded-md">{item}</h1>
             <ul className="p-8 pt-0 pb-0 text-blue-600">
                 <li className='inline-flex w-3/12'>Skill</li>
                 <li className=' w-1/12 text-center hidden xl:inline-flex'>Attr.</li>
@@ -46,8 +46,8 @@ function Skills() {
     </li>)
     );
     return (
-        <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
-            <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">{titles[2]}</h1>
+        <div className="rounded-md bg-blue-100 py-4 overflow-hidden">
+            <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md">{titles[2]}</h1>
             <ul className='columns-1 md:columns-2 xl:columns-3 gap-0'>
                 {renderSkills()}
             </ul>
