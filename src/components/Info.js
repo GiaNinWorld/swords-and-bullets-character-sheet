@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import data from "../assets/mocks/character_sheet.json";
 import { CONSTANTS } from "../assets/mocks/const.js";
 
 import { Input, Select, Option } from "@material-tailwind/react";
