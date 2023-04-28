@@ -17,10 +17,9 @@ function Skills() {
             <input type='radio' name={item + 'level'} />
             <input type='radio' name={item + 'level'} />
         </div>
-        <div className='inline-flex w-1/12'><input className='w-full' /></div>
         <div className='inline-flex w-1/12'>
-            <a href="#" className='mx-4 px-2 py-1 text-xs font-bold text-white uppercase transition-colors duration-300 transform bg-blue-400 rounded-md dark:bg-gray-700 hover:bg-primary dark:hover:bg-primary'>
-                Roll
+            <a href="#" className='mx-4 px-2 py-1 text-xs font-bold text-blue-800 uppercase transition-colors duration-300 transform bg-white rounded-md dark:bg-white hover:bg-primary dark:hover:bg-primary'>
+                00
             </a>
         </div>
     </li>)
@@ -41,7 +40,6 @@ function Skills() {
                     <span>+30</span>
                 </li>
                 <li className='inline-flex w-1/12 text-center'>Final</li>
-                <li className='inline-flex w-2/12 text-center'></li>
             </ul>
             {renderSkillList(Object.keys(data.Skills[item]), item)}
         </div>
@@ -50,7 +48,7 @@ function Skills() {
     return (
         <div className="rounded-md bg-blue-100 dark:bg-gray-800 py-4 overflow-hidden">
             <h1 className="px-3 py-2 mx-3 mb-4 font-bold text-blue-800 dark:bg-gray-700 dark:text-gray-200 tracking-wider bg-blue-200 rounded-md">{titles[2]}</h1>
-            <ul className='columns-2 xl:columns-3 gap-0'>
+            <ul className='columns-1 md:columns-2 xl:columns-3 gap-0'>
                 {renderSkills()}
             </ul>
         </div>
