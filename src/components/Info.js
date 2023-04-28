@@ -29,7 +29,7 @@ function Info() {
     return (
         <div className="rounded-md bg-blue-100 py-4">
             <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md">{titles[0]}</h1>
-            <ul className='columns-2 gap-0'>{renderTitles()}</ul>
+            <ul className='columns-1 md:columns-2 gap-0'>{renderTitles()}</ul>
         </div>
     )
 }
