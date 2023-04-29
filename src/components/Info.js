@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CONSTANTS } from "../assets/mocks/const.js";
 
 import { Input, Select, Option } from "@material-tailwind/react";
@@ -52,10 +52,10 @@ function Info() {
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">
         {(index > 1)
-            ? (<Select name={item} label={capitalize(item)} onChange={handleChange}>
+            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={formState[item]}>
                 {renderOptions(item, index)}
-            </Select>)
-            : <Input name={item} label={capitalize(item)} onChange={handleChange} value={formState[item]} />
+                </Select>
+            ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={formState[item]} />
         }
     </li>)
     );
