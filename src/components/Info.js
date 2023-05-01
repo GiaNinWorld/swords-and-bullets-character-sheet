@@ -18,7 +18,7 @@ function Info() {
 
     const renderOptions = (item, index) => {
         const iterator = (item + "s").toString().toUpperCase();
-        const response = CONSTANTS[iterator].map(option => <Option key={option} value={item +','+ option}>{option}</Option>);
+        const response = CONSTANTS[iterator].map(option => <Option key={option} value={item +','+ option.value}>{option.name}</Option>);
         return response;
     }
 
@@ -51,7 +51,7 @@ function Info() {
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">
         {(index > 1)
-            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={data[item]}>
+            ? (<Select name={item.name} label={capitalize(item.name)} onChange={handleChange} value={data[item].id}>
                 {renderOptions(item, index)}
                 </Select>
             ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={data[item]} />
