@@ -16,7 +16,7 @@ function Info() {
 
     const renderOptions = (item, index) => {
         const iterator = (item + "s").toString().toUpperCase();
-        const response = CONSTANTS[iterator].map(option => <Option key={option.name} value={item +','+ option.id}>{option.name}</Option>);
+        const response = CONSTANTS[iterator].map(option => <Option key={option.name} value={`${item},${option.id.toString()}`}>{option.name}</Option>);
         return response;
     }
 

@@ -13,7 +13,7 @@ const initInfoValues = {
   const info = {
     name: "",
     player: "",
-    race: { id: 1, name: "Dynol", effect: {}},
+    race: { id: "1", name: "Dynol", effect: {}},
     nation: initInfoValues,
     background: initInfoValues,
     size: initInfoValues
