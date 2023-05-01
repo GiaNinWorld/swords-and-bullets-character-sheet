@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Button } from "@material-tailwind/react";
 import FormContext from "./FormContext";
 // import data from "../assets/mocks/character_sheet.json";
