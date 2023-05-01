@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
+import { data as Initdata } from './components/data';
 
 import FormContext from "./components/FormContext";
 import Header from './components/Header';
@@ -20,26 +21,7 @@ const App = () => {
   const downSectionCss = "grid grid-flow-row lg:grid-col-5 lg:grid-flow-col gap-4 p-4 w-full";
   const upSectionCss = downSectionCss + " lg:grid-row-3";
 
-  const initValues = {
-    "base": 25,
-    "extras": 0,
-    "enhancement": 0,
-    "total": 25,
-    "modifier": 2
-  };
-
-  const attributes = {
-    "Strength": initValues,
-    "Dexterity": initValues,
-    "Agility": initValues,
-    "Resistence": initValues,
-    "Intelligence": initValues,
-    "Charisma": initValues,
-    "Will": initValues,
-    "Perception": initValues
-  };
-
-  const [data, setData] = useState({attributes});
+  const [data, setData] = useState(Initdata);
 
   return (
     <div className="font-roboto min-h-screen grid bg-gray-900">
