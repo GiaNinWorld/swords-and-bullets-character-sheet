@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { CONSTANTS } from "../assets/mocks/const.js";
-
 import { Input, Select, Option } from "@material-tailwind/react";
+import FormContext from "./FormContext";
 
 function Info() {
-    const info = {
-        name: '',
-        player: '',
-        race: '',
-        nation: '',
-        background: '',
-        size: ''
-    }
-    const titlesInfo = Object.keys(info);
+    
+    // const [data, setData] = useState(info);
+    const { data, setData } = useContext(FormContext);
+    
+    const titlesInfo = Object.keys(data.info);
     const titleCss = "px-3 py-2 mx-3 mb-2 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md";
-
-    // Adicione um estado para armazenar os valores do formulário
-    const [formState, setFormState] = useState(info);
 
     const capitalize = (word) => {
         return word.charAt(0).toUpperCase()
@@ -33,29 +26,35 @@ function Info() {
         // Atualize o estado com o novo valor do formulário
         if (typeof event === 'string' || event instanceof String) {
             let values = event.split(',');
-            setFormState({
-                ...formState,
-                [values[0].toLowerCase()]: values[1]
+            setData({
+                ...data,
+                    info: {
+                        ...data.info,
+                        [values[0].toLowerCase()]: values[1]
+                    }
             });
         } else {
-            setFormState({
-                ...formState,
-                [(event.target.name).toLowerCase()]: event.target.value
+            setData({
+                ...data,
+                info: {
+                    ...data.info,
+                    [(event.target.name).toLowerCase()]: event.target.value
+                }
             });
         }
     };
 
     useEffect(()=> {
-        console.log(formState);
-    },[formState])
+        console.log(data);
+    },[data])
 
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">
         {(index > 1)
-            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={formState[item]}>
+            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={data[item]}>
                 {renderOptions(item, index)}
                 </Select>
-            ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={formState[item]} />
+            ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={data[item]} />
         }
     </li>)
     );

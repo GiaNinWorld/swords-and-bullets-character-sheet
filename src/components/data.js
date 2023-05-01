@@ -9,10 +9,10 @@ const initValues = {
   const info = {
     name: "",
     player: "",
-    race: "",
-    nation: "",
-    background: "",
-    size: ""
+    race: null,
+    nation: null,
+    background: null,
+    size: null
   };
 
   const attributes = {
