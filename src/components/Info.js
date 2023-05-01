@@ -15,9 +15,15 @@ function Info() {
             + word.slice(1)
     }
 
-    const renderOptions = (item, index) => {
+    const renderOptions = (item) => {
         const iterator = (item + "s").toString().toUpperCase();
-        const response = CONSTANTS[iterator].map(option => <Option key={option.name} value={`${item},${option.id.toString()}`}>{option.name}</Option>);
+        
+        const response = CONSTANTS[iterator].map(option => {
+            return (
+            <Option key={option.name} value={`${item},${option.id.toString()}`}>
+                {option.name}
+            </Option>
+        )});
         return response;
     }
 
@@ -25,10 +31,10 @@ function Info() {
         if (typeof event === 'string' || event instanceof String) {
             let values = event.split(',');
             let name = (values[0]).concat('s').toUpperCase();
-            let object = CONSTANTS[name].map(item => {
-                return item.id === Number(values[1]);
-            });
-
+            let object = CONSTANTS[name].filter(item => {
+                return item.id.toString() === values[1].toString();
+            })[0];
+            console.log(object);
             setData({
                 ...data,
                 info: {
@@ -56,9 +62,14 @@ function Info() {
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">
         {(index > 1)
-            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={data.info[item]?.id}>
-                {renderOptions(item, index)}
-            </Select>
+            ? (<Select
+                name={item}
+                label={capitalize(item)}
+                onChange={handleChange}
+                selected={() => item === 'race'? Initdata.info.race.id: null}
+                >
+                    {renderOptions(item, index)}
+                </Select>
             ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={data.info[item]} />
         }
     </li>)

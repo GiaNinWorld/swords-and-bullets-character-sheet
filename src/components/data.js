@@ -1,25 +1,27 @@
+import {CONSTANTS} from '../assets/mocks/const';
+
 const initAttributesValues = {
     base: 25,
     extras: 0,
     enhancement: 0,
     total: 25,
     modifier: 2
-  };
+};
 
 const initInfoValues = {
     id: null, name: null, effect: {}
 };
 
-  const info = {
+const info = {
     name: "",
     player: "",
-    race: { id: "1", name: "Dynol", effect: {}},
+    race: CONSTANTS.RACES.filter(item => item.id === "1")[0],
     nation: initInfoValues,
     background: initInfoValues,
     size: initInfoValues
-  };
+};
 
-  const attributes = {
+const attributes = {
     Strength: initAttributesValues,
     Dexterity: initAttributesValues,
     Agility: initAttributesValues,
@@ -28,9 +30,9 @@ const initInfoValues = {
     Charisma: initAttributesValues,
     Will: initAttributesValues,
     Perception: initAttributesValues
-  };
+};
 
-  export const data = {
+export const data = {
     info,
     attributes
 };
