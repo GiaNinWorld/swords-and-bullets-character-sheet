@@ -4,8 +4,6 @@ import { Input, Select, Option } from "@material-tailwind/react";
 import FormContext from "./FormContext";
 
 function Info() {
-    
-    // const [data, setData] = useState(info);
     const { data, setData } = useContext(FormContext);
     
     const titlesInfo = Object.keys(data.info);
@@ -18,19 +16,25 @@ function Info() {
 
     const renderOptions = (item, index) => {
         const iterator = (item + "s").toString().toUpperCase();
-        const response = CONSTANTS[iterator].map(option => <Option key={option} value={item +','+ option.value}>{option.name}</Option>);
+        const response = CONSTANTS[iterator].map(option => <Option key={option.name} value={item +','+ option.id}>{option.name}</Option>);
         return response;
     }
 
     const handleChange = (event) => {
-        // Atualize o estado com o novo valor do formulário
         if (typeof event === 'string' || event instanceof String) {
             let values = event.split(',');
+            let name = (values[0]).concat('s').toUpperCase();
+            let object = CONSTANTS[name].map(item => {
+                console.log(item);
+                return item.id === Number(values[1]);
+            });
+            console.log(values, object);
+
             setData({
                 ...data,
                     info: {
                         ...data.info,
-                        [values[0].toLowerCase()]: values[1]
+                        [values[0].toLowerCase()]: object
                     }
             });
         } else {
@@ -51,10 +55,10 @@ function Info() {
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">
         {(index > 1)
-            ? (<Select name={item.name} label={capitalize(item.name)} onChange={handleChange} value={data[item].id}>
+            ? (<Select name={item} label={capitalize(item)} onChange={handleChange} value={data.info[item]?.id}>
                 {renderOptions(item, index)}
                 </Select>
-            ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={data[item]} />
+            ) : <Input name={item} label={capitalize(item)} onChange={handleChange} value={data.info[item]} />
         }
     </li>)
     );

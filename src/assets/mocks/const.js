@@ -1,8 +1,5 @@
 const RACES = [
-    { id: 1, name: "Dynol", effect: {attributes: [
-        {id: "Strength", value: 5},
-        {id: "Agility", value: 5}
-    ], flaws: {name : ""}} },
+    { id: 1, name: "Dynol", effect: {}},
     { id: 2, name: "Mawr" },
     { id: 3, name: "Bachring" },
     { id: 4, name: "Darwin\'o" },

@@ -1,4 +1,4 @@
-const initValues = {
+const initAttributesValues = {
     base: 25,
     extras: 0,
     enhancement: 0,
@@ -6,24 +6,28 @@ const initValues = {
     modifier: 2
   };
 
+const initInfoValues = {
+    id: null, name: null, effect: {}
+};
+
   const info = {
     name: "",
     player: "",
-    race: null,
-    nation: null,
-    background: null,
-    size: null
+    race: { id: 1, name: "Dynol", effect: {}},
+    nation: initInfoValues,
+    background: initInfoValues,
+    size: initInfoValues
   };
 
   const attributes = {
-    Strength: initValues,
-    Dexterity: initValues,
-    Agility: initValues,
-    Resistence: initValues,
-    Intelligence: initValues,
-    Charisma: initValues,
-    Will: initValues,
-    Perception: initValues
+    Strength: initAttributesValues,
+    Dexterity: initAttributesValues,
+    Agility: initAttributesValues,
+    Resistence: initAttributesValues,
+    Intelligence: initAttributesValues,
+    Charisma: initAttributesValues,
+    Will: initAttributesValues,
+    Perception: initAttributesValues
   };
 
   export const data = {
