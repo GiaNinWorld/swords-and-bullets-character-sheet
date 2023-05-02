@@ -345,10 +345,10 @@ const RELIGIONS = [
     { id: "13", name: "Ortovi", description: ["Trade", "Wealth."] },
     { id: "14", name: "Orog", description: ["Freedom", "War", "Courage."] },
     { id: "15", name: "Krog", description: ["War", "Raiders."] },
-    { id: "16", name: "Dalir", description: ["Theft, Thievery."] },
-    { id: "17", name: "Tiriricus", description: ["Assassination, Arts."] },
-    { id: "18", name: "Gazur", description: ["Violent War, Unbridled Fury."] },
-    { id: "19", name: "Zerdam", description: ["Poison, Alchemy, Diseases, Medicine."] }
+    { id: "16", name: "Dalir", description: ["Theft", "Thievery."] },
+    { id: "17", name: "Tiriricus", description: ["Assassination", "Arts."] },
+    { id: "18", name: "Gazur", description: ["Violent War", "Unbridled Fury."] },
+    { id: "19", name: "Zerdam", description: ["Poison", "Alchemy", "Diseases", "Medicine."] }
 ];
 
 export const CONSTANTS = {
