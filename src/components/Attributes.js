@@ -2,7 +2,7 @@
 import React, { useEffect, useContext } from "react";
 import { Button } from "@material-tailwind/react";
 import FormContext from "./FormContext";
-// import data from "../assets/mocks/character_sheet.json";
+import { data as Initdata } from './data';
 
 const Attributes = () => {
   const { data, setData } = useContext(FormContext);
@@ -58,7 +58,9 @@ const Attributes = () => {
   };
 
   useEffect(() => {
-    console.log(data);
+    if (JSON.stringify(data) !== JSON.stringify(Initdata)) {
+      console.log(data);
+    }
   }, [data])
 
   const renderAttributes = () => titlesAttributes.map(item =>

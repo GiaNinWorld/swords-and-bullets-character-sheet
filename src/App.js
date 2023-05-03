@@ -26,7 +26,6 @@ const App = () => {
   return (
     <div className="font-roboto min-h-screen grid bg-gray-900">
       <FormContext.Provider value={{ data, setData }}>
-        <form>
           <Header />
           <section>
             <div className={upSectionCss}>
@@ -60,9 +59,7 @@ const App = () => {
             </div>
 
           </section>
-
           <Header />
-        </form>
       </FormContext.Provider>
 
     </div >
