@@ -1,92 +1,134 @@
 const DESCRIPTIONS = [
     {
         DESCRIPTION_5: [
-            { pt: "Pode optar rolar 1d2 invés de 1d100, sendo 1 igual a erro crítico e 2 igual a um acerto" },
-            { en: "Can choose to roll 1d2 instead of 1d100, where 1 is a critical failure and 2 is a success" }
+            { pt: "Pode optar rolar 1d2 invés de 1d100, sendo 1 igual a erro crítico e 2 igual a um acerto." },
+            { en: "Can choose to roll 1d2 instead of 1d100, where 1 is a critical failure and 2 is a success." }
         ]
     },
     {
         DESCRIPTION_6: [
-            { pt: "Ganha mais 10 ao persistir mágia e reduz o dano em 1" },
-            { en: "Gains an additional 10 when persisting magic and reduces damage by 1" }
+            { pt: "Ganha mais 10 ao persistir mágia e reduz o dano em 1." },
+            { en: "Gains an additional 10 when persisting magic and reduces damage by 1." }
         ]
     },
     {
         DESCRIPTION_7: [
-            { pt: "Todos os testes de persistir relacionados a combate recebem um degrau de dificuldade a menos" },
-            { en: "All combat-related persistence tests receive one less difficulty step" }
+            { pt: "Todos os testes de persistir relacionados a combate recebem um degrau de dificuldade a menos." },
+            { en: "All combat-related persistence tests receive one less difficulty step." }
         ]
     },
     {
         DESCRIPTION_9: [
-            { pt: "Todos os testes de audição são feitos com um degrau a menos" },
-            { en: "All hearing tests are done with one less difficulty step" }
+            { pt: "Todos os testes de audição são feitos com um degrau a menos." },
+            { en: "All hearing tests are done with one less difficulty step." }
         ]
     },
     {
         DESCRIPTION_10: [
-            { pt: "O personagem 1d10+10 PP a mais" },
-            { en: "Character gains 1d10+10 PP (player points) more" }
+            { pt: "O personagem 1d10+10 PP a mais." },
+            { en: "Character gains 1d10+10 PP (silver coins) more." }
         ]
     },
     {
         DESCRIPTION_11: [
-            { pt: "Com uma ação livre o personagem pode rolar 1d5 turnos para ter o dobro de ações, porém ao termino o mesmo ficará fadigado" },
-            { en: "With a free action, the character can roll 1d5 turns to have double the number of actions, but will become fatigued at the end" }
+            { pt: "Com uma ação livre o personagem pode rolar 1d5 turnos para ter o dobro de ações, porém ao termino o mesmo ficará fadigado." },
+            { en: "With a free action, the character can roll 1d5 turns to have double the number of actions, but will become fatigued at the end." }
         ]
     },
     {
         DESCRIPTION_13: [
-            { pt: "Escolha até 2 atributos para aumentar em mais dois, podendo escolher duas vezes o mesmo atributo" },
-            { en: "Choose up to 2 attributes to increase by two, and can choose the same attribute twice" }
+            { pt: "Escolha até 2 atributos para aumentar em mais dois, podendo escolher duas vezes o mesmo atributo." },
+            { en: "Choose up to 2 attributes to increase by two, and can choose the same attribute twice." }
         ]
     },
     {
         DESCRIPTION_14: [
-            { pt: "Ganha o Enhancement: Magia: Arcanismo nível 1" },
-            { en: "Gains the Enhancement: Magic: Arcanismo level 1" }
+            { pt: "Ganha o Enhancement: Magia: Arcanismo nível 1." },
+            { en: "Gains the Enhancement: Magic: Arcanismo level 1." }
         ]
     },
     {
         DESCRIPTION_15: [
-            { pt: "Dobra limite de fadiga para movimentação" },
-            { en: "Doubles the fatigue limit for movement" }
+            { pt: "Dobra limite de fadiga para movimentação." },
+            { en: "Doubles the fatigue limit for movement." }
         ]
     },
     {
         DESCRIPTION_16: [
-            { pt: "Ao fazer um ataque de investida conta como montaria" },
-            { en: "When making a charge attack, it counts as a mount" }
+            { pt: "Ao fazer um ataque de investida conta como montaria." },
+            { en: "When making a charge attack, it counts as a mount." }
         ]
     },
     {
         DESCRIPTION_17: [
-            { pt: "Pode prender o fôlego duas vezes mais" },
-            { en: "Can hold breath for twice as long" }
+            { pt: "Pode prender o fôlego duas vezes mais." },
+            { en: "Can hold breath for twice as long." }
         ]
     },
     {
         DESCRIPTION_18: [
-            { pt: "Sua boca conta como arma natural, no caso ganha o Enhancement: Nature Weapon(mouth)" },
-            { en: "Your mouth counts as a natural weapon, and gains the Enhancement: Nature Weapon(mouth)" }
+            { pt: "Sua boca conta como arma natural, no caso ganha o Enhancement: Nature Weapon(boca)." },
+            { en: "Your mouth counts as a natural weapon, and gains the Enhancement: Nature Weapon(mouth)." }
         ]
     },
     {
         DESCRIPTION_19: [
-            { pt: "Ao realizar uma ação de correr seu movimento triplica ao invés de duplicar" },
+            { pt: "Ao realizar uma ação de correr seu movimento triplica ao invés de duplicar." },
             { en: "When taking a dash action, your movement speed triples instead of doubling." }
         ]
     },
     {
         DESCRIPTION_20: [
-            { pt: "Com uma ação rápida pode fazer uma pequena labareda de fogo, ataque desarmado que causa 1d5+2, pode ser feito novamente após uma boa refeição" },
+            { pt: "Com uma ação rápida pode fazer uma pequena labareda de fogo, ataque desarmado que causa 1d5+2, pode ser feito novamente após uma boa refeição." },
             { en: "With a quick action, you can create a small flame attack that deals 1d5+2 damage as an unarmed attack. It can be used again after a good meal." }
         ]
     },
     {
         DESCRIPTION_21: [
-            { pt: "Dobre a distância de saltos e pulos" },
+            { pt: "Dobre a distância de saltos e pulos." },
             { en: "Double the distance of jumps and leaps." }
+        ]
+    },
+    {
+        DESCRIPTION_22: [
+            { pt: "Devido ao seu péssimo temperamento o ato de fugir ou evitar uma luta se torna um teste difícil de controle." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTION_23: [
+            { pt: "Devidor a sua crença sobre sua sorte, os Bachrings\' possuem um terrível pavor de 'perder sua sorte'." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTIONS_24: [
+            { pt: "Devidor a sua natureza não mágica os Darwin\'o recebem -10 ao utilizar canalizar ou quaisqueres magias arcanas." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTIONS_25: [
+            { pt: "Toda vez em que um Orgun ficar ferido ele terá de realizar um teste de controle ou ficará em frenesi, dificuldade: normal." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTIONS_26: [
+            { pt: "Testes de lógica ou empatia são feitos com um degrau de dificuldade a mais." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTION_27: [
+            { pt: "Naturalmente carnívoro, seu organismo rejeita vegetais, álcool é extremamente mais potente em seu corpo, testes de constituição para evitar ficar bêbado são realizados com dois degraus de dificuldade a mais." },
+            { en: "" }
+        ]
+    },
+    {
+        DESCRIPTION_28: [
+            { pt: "Caso esteja sofrendo de friagem ou congelamento deve-se fazer um teste de persistir, dificuldade: normal, ou será considerado nocauteado, caso a temperatura continue a cair o personagem pode morrer." },
+            { en: "" }
         ]
     }
 ];
@@ -108,7 +150,7 @@ const ENHANCEMENTS = [
     { id: "14", name: "Mana Batteries", effect: { description: DESCRIPTIONS.DESCRIPTION_14 }, cost: 0 },
     { id: "15", name: "Half-Quadruped", effect: { description: DESCRIPTIONS.DESCRIPTION_16 }, cost: 0 },
     { id: "16", name: "Powerful Charge", effect: { description: DESCRIPTIONS.DESCRIPTION_16 }, cost: 0 },
-    { id: "17", name: "Semi-aquatic", effect: { skills: [{ Swimming: 1 }], descrip5ion: DESCRIPTIONS.DESCRIPTION_17 }, cost: 0 },
+    { id: "17", name: "Semi-aquatic", effect: { skills: [{ Swimming: 1 }], description: DESCRIPTIONS.DESCRIPTION_17 }, cost: 0 },
     { id: "18", name: "Powerful Jaw", effect: { description: DESCRIPTIONS.DESCRIPTION_18 }, cost: 0 },
     { id: "19", name: "Born Runner", effect: { description: DESCRIPTIONS.DESCRIPTION_19 }, cost: 0 },
     { id: "20", name: "Dohva\'s Breath", effect: { description: DESCRIPTIONS.DESCRIPTION_20 }, cost: 0 },
@@ -118,13 +160,13 @@ const ENHANCEMENTS = [
 ];
 
 const FLAWS = [
-    { id: "1", name: "Péssimo Temperamento", effect: {}, cost: 0 },
-    { id: "2", name: "Supersticioso", effect: {}, cost: 0 },
-    { id: "3", name: "Non-magical nature", effect: {}, cost: 0 },
-    { id: "4", name: "Fúria Incontrolável", effect: {}, cost: 0 },
-    { id: "5", name: "Stupid as an Ogre", effect: {}, cost: 0 },
-    { id: "6", name: "Carnívoro", effect: {}, cost: 0 },
-    { id: "7", name: "Cold Blood", effect: {}, cost: 0 },
+    { id: "1", name: "Péssimo Temperamento", effect: { description: DESCRIPTIONS.DESCRIPTION_22 }, cost: 0 },
+    { id: "2", name: "Supersticioso", effect: { description: DESCRIPTIONS.DESCRIPTION_23 }, cost: 0 },
+    { id: "3", name: "Non-magical nature", effect: { description: DESCRIPTIONS.DESCRIPTIONS_24 }, cost: 0 },
+    { id: "4", name: "Fúria Incontrolável", effect: { description: DESCRIPTIONS.DESCRIPTIONS_25 }, cost: 0 },
+    { id: "5", name: "Stupid as an Ogre", effect: { description: DESCRIPTIONS.DESCRIPTIONS_26 }, cost: 0 },
+    { id: "6", name: "Carnívoro", effect: { description: DESCRIPTIONS.DESCRIPTION_27 }, cost: 0 },
+    { id: "7", name: "Cold Blood", effect: { description: DESCRIPTIONS.DESCRIPTION_28 }, cost: 0 },
 ];
 
 const RACES = [
