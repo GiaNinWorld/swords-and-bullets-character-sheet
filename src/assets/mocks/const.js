@@ -171,169 +171,79 @@ const FLAWS = [
 
 const RACES = [
     {
-        id: "1", name: "Dynol", attributes: [
-            { Strength: 25 },
-            { Dexterity: 25 },
-            { Agility: 25 },
-            { Resistence: 25 },
-            { Intelligence: 25 },
-            { Charisma: 25 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: ENHANCEMENTS[0] }
+        id: "1", name: "Dynol", attributes: {
+            Strength: 25, Dexterity: 25, Agility: 25, Resistence: 25, Intelligence: 25, Charisma: 25, Will: 25, Perception: 25
+        }, effect: { enhancements: ENHANCEMENTS[0] }
     },
     {
-        id: "2", name: "Mawr", attributes: [
-            { Strength: 30 },
-            { Dexterity: 25 },
-            { Agility: 25 },
-            { Resistence: 30 },
-            { Intelligence: 23 },
-            { Charisma: 25 },
-            { Will: 20 },
-            { Perception: 23 }], effect: { enhancements: [ENHANCEMENTS[1], ENHANCEMENTS[2], ENHANCEMENTS[3]] }
+        id: "2", name: "Mawr", attributes: {
+            Strength: 30, Dexterity: 25, Agility: 25, Resistence: 30, Intelligence: 23, Charisma: 25, Will: 20, Perception: 23
+        }, effect: { enhancements: [ENHANCEMENTS[1], ENHANCEMENTS[2], ENHANCEMENTS[3]] }
     },
     {
-        id: "3", name: "Bachring", attributes: [
-            { Strength: 22 },
-            { Dexterity: 27 },
-            { Agility: 25 },
-            { Resistence: 25 },
-            { Intelligence: 25 },
-            { Charisma: 27 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[0], ENHANCEMENTS[4]] }
+        id: "3", name: "Bachring", attributes: {
+            Strength: 22, Dexterity: 27, Agility: 25, Resistence: 25, Intelligence: 25, Charisma: 27, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[0], ENHANCEMENTS[4]] }
     },
     {
-        id: "4", name: "Darwin\'o", attributes: [
-            { Strength: 27 },
-            { Dexterity: 25 },
-            { Agility: 23 },
-            { Resistence: 30 },
-            { Intelligence: 27 },
-            { Charisma: 23 },
-            { Will: 27 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[5]] }
+        id: "4", name: "Darwin\'o", attributes: {
+            Strength: 27, Dexterity: 25, Agility: 23, Resistence: 30, Intelligence: 27, Charisma: 23, Will: 27, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[5]] }
     },
     {
-        id: "5", name: "Orgun", attributes: [
-            { Strength: 30 },
-            { Dexterity: 35 },
-            { Agility: 23 },
-            { Resistence: 30 },
-            { Intelligence: 22 },
-            { Charisma: 23 },
-            { Will: 30 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[6]] }
+        id: "5", name: "Orgun", attributes: {
+            Strength: 30, Dexterity: 35, Agility: 23, Resistence: 30, Intelligence: 22, Charisma: 23, Will: 30, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[6]] }
     },
     {
-        id: "6", name: "Orgare", attributes: [
-            { Strength: 27 },
-            { Dexterity: 27 },
-            { Agility: 23 },
-            { Resistence: 27 },
-            { Intelligence: 25 },
-            { Charisma: 25 },
-            { Will: 30 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[6]] }
+        id: "6", name: "Orgare", attributes: {
+            Strength: 27, Dexterity: 27, Agility: 23, Resistence: 27, Intelligence: 25, Charisma: 25, Will: 30, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[6]] }
     },
     {
-        id: "7", name: "Ogre", attributes: [
-            { Strength: 40 },
-            { Dexterity: 30 },
-            { Agility: 27 },
-            { Resistence: 45 },
-            { Intelligence: 13 },
-            { Charisma: 15 },
-            { Will: 20 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[6], ENHANCEMENTS[7]] }
+        id: "7", name: "Ogre", attributes: {
+            Strength: 40, Dexterity: 30, Agility: 27, Resistence: 45, Intelligence: 13, Charisma: 15, Will: 20, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[6], ENHANCEMENTS[7]] }
     },
     {
-        id: "8", name: "Goberan\'o", attributes: [
-            { Strength: 22 },
-            { Dexterity: 28 },
-            { Agility: 28 },
-            { Resistence: 20 },
-            { Intelligence: 27 },
-            { Charisma: 30 },
-            { Will: 20 },
-            { Perception: 32 }], effect: { enhancements: [ENHANCEMENTS[8], ENHANCEMENTS[9]] }
+        id: "8", name: "Goberan\'o", attributes: {
+            Strength: 22, Dexterity: 28, agility: 28, Resistence: 20, intelligence: 27, Charisma: 30, will: 20, Perception: 32
+        }, effect: { enhancements: [ENHANCEMENTS[8], ENHANCEMENTS[9]] }
     },
     {
-        id: "9", name: "Furutan\'o", attributes: [
-            { Strength: 27 },
-            { Dexterity: 27 },
-            { Agility: 25 },
-            { Resistence: 21 },
-            { Intelligence: 27 },
-            { Charisma: 28 },
-            { Will: 27 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[10], ENHANCEMENTS[11]] }
+        id: "9", name: "Furutan\'o", attributes: { 
+            Strength: 27, Dexterity: 27, Agility: 25, Resistence: 21, Intelligence: 27, Charisma: 28, Will: 27, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[10], ENHANCEMENTS[11]] }
     },
     {
-        id: "10", name: "Dontarian\'o", attributes: [
-            { Strength: 25 },
-            { Dexterity: 25 },
-            { Agility: 27 },
-            { Resistence: 23 },
-            { Intelligence: 27 },
-            { Charisma: 27 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[12], ENHANCEMENTS[13]] }
+        id: "10", name: "Dontarian\'o", attributes: {
+            Strength: 25, Dexterity: 25, Agility: 27, Resistence: 23, Intelligence: 27, Charisma: 27, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[12], ENHANCEMENTS[13]] }
     },
     {
-        id: "11", name: "Altayian\'e", attributes: [
-            { Strength: 30 },
-            { Dexterity: 27 },
-            { Agility: 30 },
-            { Resistence: 27 },
-            { Intelligence: 20 },
-            { Charisma: 20 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[14], ENHANCEMENTS[15]] }
+        id: "11", name: "Altayian\'e", attributes: {
+            Strength: 30, Dexterity: 27, Agility: 30, Resistence: 27, Intelligence: 20, Charisma: 20, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[14], ENHANCEMENTS[15]] }
     },
     {
-        id: "12", name: "Kanaka\'ka", attributes: [
-            { Strength: 35 },
-            { Dexterity: 25 },
-            { Agility: 18 },
-            { Resistence: 28 },
-            { Intelligence: 23 },
-            { Charisma: 23 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[16], ENHANCEMENTS[17]] }
+        id: "12", name: "Kanaka\'ka", attributes: {
+            Strength: 35, Dexterity: 25, Agility: 18, Resistence: 28, Intelligence: 23, Charisma: 23, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[16], ENHANCEMENTS[17]] }
     },
     {
-        id: "13", name: "Leonin\'os", attributes: [
-            { Strength: 26 },
-            { Dexterity: 26 },
-            { Agility: 30 },
-            { Resistence: 25 },
-            { Intelligence: 25 },
-            { Charisma: 27 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[18]] }
+        id: "13", name: "Leonin\'os", attributes: {
+            Strength: 26, Dexterity: 26, Agility: 30, Resistence: 25, Intelligence: 25, Charisma: 27, Will: 25, Perception: 25
+         }, effect: { enhancements: [ENHANCEMENTS[18]] }
     },
     {
-        id: "14", name: "Dohvak\'as", attributes: [
-            { Strength: 23 },
-            { Dexterity: 25 },
-            { Agility: 25 },
-            { Resistence: 25 },
-            { Intelligence: 27 },
-            { Charisma: 27 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[19]] }
+        id: "14", name: "Dohvak\'as", attributes: {
+            Strength: 23, Dexterity: 25, Agility: 25, Resistence: 25, Intelligence: 27, Charisma: 27, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[19]] }
     },
     {
-        id: "15", name: "Bulk\'ers", attributes: [
-            { Strength: 20 },
-            { Dexterity: 25 },
-            { Agility: 25 },
-            { Resistence: 27 },
-            { Intelligence: 29 },
-            { Charisma: 30 },
-            { Will: 25 },
-            { Perception: 25 }], effect: { enhancements: [ENHANCEMENTS[20], ENHANCEMENTS[16], ENHANCEMENTS[21]] }
+        id: "15", name: "Bulk\'ers", attributes: {
+            Strength: 20, Dexterity: 25, Agility: 25, Resistence: 27, Intelligence: 29, Charisma: 30, Will: 25, Perception: 25
+        }, effect: { enhancements: [ENHANCEMENTS[20], ENHANCEMENTS[16], ENHANCEMENTS[21]] }
     }
 ];
 

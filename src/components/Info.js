@@ -1,8 +1,8 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { CONSTANTS } from "../assets/mocks/const.js";
 import { Input, Select, Option } from "@material-tailwind/react";
 import FormContext from "./FormContext";
-import { data as Initdata } from './data';
+// import { data as Initdata } from './data';
 
 function Info() {
     const { data, setData } = useContext(FormContext);
@@ -52,12 +52,6 @@ function Info() {
             });
         }
     };
-
-    useEffect(() => {
-        if (JSON.stringify(data) !== JSON.stringify(Initdata)) {
-            console.log(data);
-        }
-    }, [data]);
 
     const renderTitles = () => titlesInfo.map((item, index) =>
     (<li key={item} className="p-4 pt-2 pb-2">

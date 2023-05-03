@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useContext } from "react";
 import { Button } from "@material-tailwind/react";
 import FormContext from "./FormContext";
@@ -57,33 +56,53 @@ const Attributes = () => {
     );
   };
 
+  const updateBaseByRace = () => {
+    let attributes = data.attributes;
+    
+    titlesAttributes.forEach(item => {
+      let value = data.info.race.attributes[item];
+      attributes[item] = {
+          base: value,
+          extras: 0,
+          enhancement: 0,
+          modifier: Math.trunc(value / 10),
+          total: value
+        }
+      });
+
+    setData({
+      ...data,
+      attributes: attributes
+    });
+  };
+  
   useEffect(() => {
-    if (JSON.stringify(data) !== JSON.stringify(Initdata)) {
-      console.log(data);
-    }
-  }, [data])
+    if (JSON.stringify(data.info.race) !== JSON.stringify(Initdata.info.race)) {
+      updateBaseByRace()
+    };
+  }, [data.info.race])
 
   const renderAttributes = () => titlesAttributes.map(item =>
   (<li key={item + '_name'} className="px-4">
-    <div key={item + '_fullname'} className="inline-flex w-1/6 md:w-1/12">
+    <div key={item + '_fullname'} className="inline-flex w-3/12 md:w-1/6">
       <span className="font-bold">{item.substring(0, 3).toUpperCase()}</span>
     </div>
-    <div key={item + '_base'} className="hidden w-1/6 md:inline-flex md:w-3/12 text-center">
-      <span className="hidden md:block">{item}</span>
+    <div key={item + '_base'} className="hidden w-1/6 md:inline-flex text-center">
+      <span className="hidden lg:block">{item}</span>
     </div>
     <div className="inline-flex w-1/12 text-center">{data.attributes[item].base}</div>
-    <div className="inline-flex w-1/6">
-      <input type="number" alt={item} onChange={handleExtraChange} value={data.attributes[item].extras} className="w-full m-2 text-center" />
+    <div className="inline-flex w-1/6 p-2">
+      <input type="number" alt={item} onChange={handleExtraChange} value={data.attributes[item].extras} className="w-full text-center" />
     </div>
-    <div className="inline-flex w-1/6">
-      <input type="number" alt={item} onChange={handleEnhancementChange} value={data.attributes[item].enhancement} className="w-full m-2 text-center" />
+    <div className="inline-flex w-1/6 p-2">
+      <input type="number" alt={item} onChange={handleEnhancementChange} value={data.attributes[item].enhancement} className="w-full text-center" />
     </div>
     <div className="inline-flex w-1/6 text-center">
       <Button variant="outlined" size="sm">
         {data.attributes[item].total}
       </Button>
     </div>
-    <div className="inline-flex w-1/12 text-left">{data.attributes[item].modifier}</div>
+    <div className="inline-flex w-1/12 text-center px-2">{data.attributes[item].modifier}</div>
   </li>)
   );
 
@@ -92,11 +111,11 @@ const Attributes = () => {
       <h1 className="px-3 py-2 mx-3 mb-2 font-bold text-blue-800 tracking-wider bg-blue-200 rounded-md">Attributes</h1>
       <ul>
         <li className="px-4">
-          <div className="inline-flex w-1/6 md:w-2/6 lg:w-2/6 text-blue-500 text-xs"></div>
-          <div className="inline-flex w-2/12 text-blue-500 text-xs text-center">Base</div>
-          <div className="inline-flex w-2/12 text-blue-500 text-xs text-center">Extr.</div>
-          <div className="inline-flex w-1/12 text-blue-500 text-xs">Enha.</div>
-          <div className="inline-flex w-2/12 text-blue-500 text-xs">Total</div>
+          <div className="inline-flex w-3/12 md:w-2/6 lg:w-2/6 text-blue-500 text-xs"></div>
+          <div className="inline-flex w-1/12 text-blue-500 text-xs text-center">Base</div>
+          <div className="inline-flex w-2/12 text-blue-500 text-xs text-center px-4">Extr.</div>
+          <div className="inline-flex w-2/12 text-blue-500 text-xs px-4">Enha.</div>
+          <div className="inline-flex w-2/12 text-blue-500 text-xs px-2">Total</div>
           <div className="inline-flex w-1/12 text-blue-500 text-xs">Mod.</div>
         </li>
         {renderAttributes()}
