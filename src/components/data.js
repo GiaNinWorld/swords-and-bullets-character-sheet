@@ -15,7 +15,7 @@ const initInfoValues = {
 const info = {
     name: "",
     player: "",
-    race: CONSTANTS.RACES.filter(item => item.id === "1")[0],
+    race: CONSTANTS.RACES.filter(item => item.id === "1")[0].name,
     nation: initInfoValues,
     background: initInfoValues,
     size: initInfoValues

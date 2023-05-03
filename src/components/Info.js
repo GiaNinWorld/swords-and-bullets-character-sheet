@@ -66,7 +66,7 @@ function Info() {
                 name={item}
                 label={capitalize(item)}
                 onChange={handleChange}
-                selected={() => item === 'race'? Initdata.info.race.id: null}
+                selected={() => data.info[item]?.name }
                 >
                     {renderOptions(item, index)}
                 </Select>
