@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { data as Initdata } from './components/data';
 
 import FormContext from "./components/FormContext";
@@ -16,12 +16,18 @@ import Weapons from './components/Weapons';
 import Equipments from './components/Equipments';
 
 const App = () => {
-  const rightColCss = "grid col-span-5 row-span-1 lg:col-span-3 lg:row-span-2";
+  const rightColCss = "grid col-span-5 row-span-1 md:col-span-4 lg:col-span-3 lg:row-span-2";
   const rowCss = "grid grid-flow-row lg:grid-col-6 lg:grid-flow-col gap-4 col-span-6";
   const downSectionCss = "grid grid-flow-row lg:grid-col-5 lg:grid-flow-col gap-4 p-4 w-full";
   const upSectionCss = downSectionCss + " lg:grid-row-3";
 
   const [data, setData] = useState(Initdata);
+
+  useEffect(() => {
+    if (JSON.stringify(data) !== JSON.stringify(Initdata)) {
+        console.log(data);
+    }
+}, [data]);
 
   return (
     <div className="font-roboto min-h-screen grid bg-gray-900">
