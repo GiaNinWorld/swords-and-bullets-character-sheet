@@ -35,7 +35,7 @@ const attributes = {
 const stats = {
     passiveAttention: 0,
     an: 0,
-    life: {current: 0, total: },
+    life: {current: 0, total: ''},
     criticalDamage: {current: 0, total: 0},
     iniciative: 0,
     move: 0,
