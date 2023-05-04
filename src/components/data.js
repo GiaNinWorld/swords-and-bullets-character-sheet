@@ -32,7 +32,21 @@ const attributes = {
     Perception: initAttributesValues
 };
 
+const stats = {
+    passiveAttention: 0,
+    an: 0,
+    life: {current: 0, total: ''},
+    criticalDamage: {current: 0, total: 0},
+    iniciative: 0,
+    move: 0,
+    fervor: {current: 0, total: 0},
+    blood: {current: 0, total: 0},
+    breath: {current: 0, total: 0},
+    condition: []
+};
+
 export const data = {
     info,
-    attributes
+    attributes,
+    stats
 };
