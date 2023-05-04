@@ -18,7 +18,7 @@ import Equipments from './components/Equipments';
 const App = () => {
   const rightColCss = "grid col-span-5 row-span-1 md:col-span-4 lg:col-span-3 lg:row-span-2";
   const rowCss = "grid grid-flow-row lg:grid-col-6 lg:grid-flow-col gap-4 col-span-6";
-  const downSectionCss = "grid grid-flow-row lg:grid-col-5 lg:grid-flow-col gap-4 p-4 w-full";
+  const downSectionCss = "grid grid-flow-row lg:grid-col-5 lg:grid-flow-col gap-4 py-2 px-2 w-full";
   const upSectionCss = downSectionCss + " lg:grid-row-3";
 
   const [data, setData] = useState(Initdata);
@@ -48,20 +48,21 @@ const App = () => {
               <div className={rightColCss}><Portrait /></div>
             </div>
 
-            <div className="col-span-6">
-              <div className={rowCss}>
+            <div className={downSectionCss}>
+              <div className="grid grid-flow-row grid-col-4 gap-4 w-full">
+                <Weapons />
+                <Equipments />
+              </div>
+              <div className="grid grid-flow-row grid-col-1 gap-4 w-full">
                 <Traits />
                 <Magic />
               </div>
             </div>
-
+            
             <div className={downSectionCss}>
+              
               <Skills />
 
-              <div className="grid grid-flow-row lg:grid-col-6 gap-4 w-full">
-                <Weapons />
-                <Equipments />
-              </div>
             </div>
 
           </section>
