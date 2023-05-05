@@ -32,7 +32,264 @@ const attributes = {
     Perception: initAttributesValues
 };
 
+const skills = {
+    Body: {
+        Athetics: {
+            Attribute: "Strength",
+            Level: 0,
+            Result: 0
+        },
+        Acrobatics: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Swimming: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Jump: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Constituion: {
+            Attribute: "Resistence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Mental: {
+        Awareness: {
+            Attribute: "Perception",
+            Level: 0,
+            Result: 0
+        },
+        Logic: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Courage: {
+            Attribute: "Will",
+            Level: 0,
+            Result: 0
+        },
+        Control: {
+            Attribute: "Will",
+            Level: 0,
+            Result: 0
+        },
+        Persist: {
+            Attribute: "Will",
+            Level: 0,
+            Result: 0
+        },
+        Investigation: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Social: {
+        Empathy: {
+            Attribute: "Charisma",
+            Level: 0,
+            Result: 0
+        },
+        FastTalk: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Intimidation: {
+            Attribute: "Charisma",
+            Level: 0,
+            Result: 0
+        },
+        Leadership: {
+            Attribute: "Charisma",
+            Level: 0,
+            Result: 0
+        },
+        SexAppeal: {
+            Attribute: "Charisma",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Nature: {
+        Survival: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Training: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Robbery: {
+        Stealth: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Theft: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        LockPicking: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Occult: {
+        Occult: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Alchemy: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Ritual: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Theology: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Ridding: {
+        Driving: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Mount: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Navigating: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Craftsmenship: {
+        Crafting: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Healing: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Performing: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        }
+    },
+    Combat: {
+        Dodge: {
+            Attribute: "Agility",
+            Level: 0,
+            Result: 0
+        },
+        Shield: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Brawling: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Mace: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Knife: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Axe: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Sword: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Polearm: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Whip: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Throw: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Bow: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Crossbow: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Pistol: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Rifle: {
+            Attribute: "Dexterity",
+            Level: 0,
+            Result: 0
+        },
+        Siege: {
+            Attribute: "Intelligence",
+            Level: 0,
+            Result: 0
+        },
+        Channeling: {
+            Attribute: "Will",
+            Level: 0,
+            Result: 0
+        }
+    }
+};
+
 export const data = {
     info,
-    attributes
+    attributes,
+    skills
 };
