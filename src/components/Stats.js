@@ -54,7 +54,7 @@ function Stats() {
                 Passive Attention: {data.stats.passiveAttention }
                 </li>
                 <li className='py-2 px-4'>
-                    <Input label={'Natural Armour'} onChange={()=>{}} value={data.stats.an} />
+                    <Input label={'Natural Armour'} onChange={()=>{}} value={data.stats.naturalarmour} />
                 </li>
                 <li className='py-2 px-4'>
                     <div className='inline-flex w-1/2'>

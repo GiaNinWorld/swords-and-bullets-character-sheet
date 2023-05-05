@@ -286,10 +286,11 @@ const skills = {
             Result: 0
         }
     }
+}
 
 const stats = {
     passiveAttention: 0,
-    an: 0,
+    naturalarmour: 0,
     life: {current: 0, total: ''},
     criticalDamage: {current: 0, total: 0},
     iniciative: 0,
@@ -303,6 +304,6 @@ const stats = {
 export const data = {
     info,
     attributes,
-    skills
+    skills,
     stats
 };
